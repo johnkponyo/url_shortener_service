@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>URL Shortener</h1>
+        </header>
+
+        <section class="form-section">
+            <form action="/shorten" method="POST">
+                <input type="text" name="longUrl" placeholder="Enter your URL" required>
+                <button type="submit">Shorten</button>
+            </form>
+        </section>
+
+        <% if (successMessage) { %>
+            <section class="message success">
+                <p><strong><%= successMessage %></strong></p>
+            </section>
+        <% } %>
+
+        <% if (errors) { %>
+            <section class="message error">
+                <ul>
+                    <% errors.forEach(function(error) { %>
+                        <li><%= error.msg %></li>
+                    <% }); %>
+                </ul>
+            </section>
+        <% } %>
+
+        <section class="recent-urls">
+            <h2>Recently Shortened URLs</h2>
+            <ul>
+                <% recentUrls.forEach(function(url) { %>
+                    <li class="url-item">
+                        <div class="url-card">
+                            <p class="short-url">
+                                <a href="/<%= url.shortCode %>">http://localhost:3000/<%= url.shortCode %></a>
+                            </p>
+                            <p class="long-url">
+                                <small><%= url.longUrl %></small>
+                            </p>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

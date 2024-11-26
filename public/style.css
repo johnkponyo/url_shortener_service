@@ -1,0 +1,139 @@
+/* General Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #007BFF;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Message Section */
+.message {
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.message ul {
+    list-style: none;
+}
+
+.message li {
+    margin: 5px 0;
+}
+
+/* Recently Shortened URLs Section */
+.recent-urls {
+    margin-top: 40px;
+}
+
+.recent-urls h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.recent-urls ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.url-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.url-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.short-url a {
+    font-weight: bold;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.short-url a:hover {
+    text-decoration: underline;
+}
+
+.long-url {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    input {
+        width: 60%;
+    }
+}
